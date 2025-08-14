@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #f0f8ff;
+    --background-color: #ffffff;
+    --text-color: #333;
+    --correct-color: #28a745;
+    --incorrect-color: #dc3545;
+    --light-grey: #f4f4f4;
+    --dark-grey: #6c757d;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#app-container {
+    width: 100%;
+    max-width: 900px;
+    background: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 700;
+}
+
+.progress-container {
+    width: 90%;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 20px;
+    margin: 15px auto 0;
+    position: relative;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: var(--correct-color);
+    border-radius: 20px;
+    transition: width 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#progress-text {
+    z-index: 2;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+main {
+    padding: 25px;
+}
+
+#module-container {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+h2, h3 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.question {
+    background-color: var(--light-grey);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--primary-color);
+}
+
+.question p {
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.options label {
+    display: block;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid #ddd;
+}
+
+.options label:hover {
+    background-color: #e9ecef;
+}
+
+.options input[type="radio"] {
+    margin-right: 10px;
+}
+
+.question.correct-answer .options label.selected {
+    background-color: #d4edda;
+    border-color: var(--correct-color);
+    font-weight: bold;
+}
+
+.question.incorrect-answer .options label.selected {
+    background-color: #f8d7da;
+    border-color: var(--incorrect-color);
+    font-weight: bold;
+}
+
+.question.incorrect-answer .options label.correct {
+    background-color: #d4edda;
+    border-color: var(--correct-color);
+}
+
+.feedback {
+    margin-top: 5px;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+.feedback.correct {
+    color: var(--correct-color);
+}
+
+.feedback.incorrect {
+    color: var(--incorrect-color);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--light-grey);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background-color: var(--dark-grey);
+    cursor: not-allowed;
+}
+
+#submit-quiz-btn {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    background-color: var(--correct-color);
+}
+
+#submit-quiz-btn:hover {
+    background-color: #218838;
+}
+
+#quiz-results {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+}

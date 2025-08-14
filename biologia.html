@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours Interactif de Biologie</title>
+    <link rel="stylesheet" href="biologia.css">
+</head>
+<body>
+    <div id="app-container">
+        <header>
+            <h1>Cours de Biologie</h1>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+                <span id="progress-text">0%</span>
+            </div>
+        </header>
+        
+        <main id="main-content">
+            <div id="module-container">
+                <h2 id="module-title"></h2>
+                <p id="module-summary"></p>
+            </div>
+
+            <div id="quiz-container">
+                <h3 id="quiz-title">Test d'auto-évaluation</h3>
+                <div id="question-container"></div>
+                <button id="submit-quiz-btn">Valider les réponses</button>
+                <div id="quiz-results"></div>
+            </div>
+        </main>
+
+        <footer>
+            <button id="prev-module-btn" disabled>Module Précédent</button>
+            <button id="next-module-btn">Module Suivant</button>
+        </footer>
+    </div>
+
+    <script src="biologia.js"></script>
+</body>
+</html>
