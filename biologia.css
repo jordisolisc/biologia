@@ -141,17 +141,20 @@ h2, h3 {
 }
 
 .feedback {
-    margin-top: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
     font-size: 0.9em;
-    font-style: italic;
 }
 
 .feedback.correct {
     color: var(--correct-color);
+    background-color: #e9f7ef;
 }
 
 .feedback.incorrect {
     color: var(--incorrect-color);
+    background-color: #fdeeee;
 }
 
 footer {
